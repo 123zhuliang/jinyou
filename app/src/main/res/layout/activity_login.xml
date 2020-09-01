@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/choose"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <EditText
+            android:id="@+id/login_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/login_password"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="72dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="70dp"
+            android:hint="请输入您的手机号"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="39dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="321dp"
+            android:layout_marginBottom="427dp"
+            android:background="@drawable/phone"
+            android:textSize="28sp" />
+
+        <TextView
+            android:layout_width="37dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="323dp"
+            android:layout_marginBottom="353dp"
+            android:background="@drawable/lock" />
+
+        <EditText
+            android:id="@+id/login_password"
+            android:layout_width="279dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="72dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="347dp"
+            android:hint="请输入您的密码"
+            android:inputType="textPassword"
+            android:textSize="28sp"
+            />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="81dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="89dp"
+            android:layout_marginEnd="87dp"
+            android:layout_marginBottom="241dp"
+            android:background="@drawable/login2"
+            android:onClick="denglu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="294dp"
+            android:layout_marginBottom="199dp"
+            android:background="@drawable/forgetpasswd"
+            android:onClick="setpassword"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="37dp"
+            android:layout_marginBottom="199dp"
+            android:background="@drawable/registered2"
+            android:onClick="chuce"/>
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

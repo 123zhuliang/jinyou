@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditInfo_ctivity"
+    android:background="@drawable/writeownmessage1">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="364dp"
+        android:layout_marginBottom="760dp"
+        android:background="@drawable/jtarrow"
+        android:onClick="infofanhui"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="760dp"
+        android:background="@drawable/save5"
+        android:onClick="infowanchen"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="343dp"
+        android:layout_marginBottom="695dp"
+        android:background="@drawable/self" />
+
+    <EditText
+        android:id="@+id/infoname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="620dp"
+        android:background="@null"
+        android:text="小七"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/infogongsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="540dp"
+        android:background="@null"
+        android:text="广播有限公司"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/infobumen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="490dp"
+        android:background="@null"
+        android:text="安卓部"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/infoposion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="435dp"
+        android:background="@null"
+        android:text="教授"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/infoshouji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="350dp"
+        android:background="@null"
+        android:inputType="number"
+        android:maxLength="11"
+        android:text="13778452967"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/infoyoujian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="300dp"
+        android:background="@null"
+        android:inputType="textEmailAddress"
+        android:text="1191286130@qq.com"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/infochuanzhen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="245dp"
+        android:background="@null"
+        android:text="无"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/infowangzhi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="185dp"
+        android:background="@null"
+        android:text="无"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/infodizhi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="135dp"
+        android:background="@null"
+        android:text="东软大道"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/infooff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/guanoff" />
+</RelativeLayout>

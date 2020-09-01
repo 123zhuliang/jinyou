@@ -2,12 +2,59 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/first"
+    android:id="@+id/jiemianone"
+    >
 
-    <ImageView
-        android:id="@+id/imageView2"
+
+    <TextView
+        android:id="@+id/biaozhi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="43dp"
+
+        android:background="@drawable/scanning" />
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="-20dp"
+        android:background="@drawable/search" />
+    <TextView
+        android:id="@+id/searchcard"
+        android:layout_width="333dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="-15dp"
+        android:layout_marginLeft="48dp"
+        android:text="请输入公司、电话、姓名"
+        android:inputType="text"
+
+        />
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cart_review"
+        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        app:srcCompat="@mipmap/tx3" />
+        android:layout_height="wrap_content"
+       >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+
+
+
+
+
+
 </LinearLayout>

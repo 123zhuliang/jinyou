@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".regActivity"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/choose"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="0dp"
+        >
+
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="65dp"
+            android:layout_marginEnd="27dp"
+            android:layout_marginBottom="442dp"
+            android:hint="请输入您的手机号"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="279dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="65dp"
+            android:layout_marginEnd="27dp"
+            android:layout_marginBottom="372dp"
+            android:hint="设置密码"
+            android:inputType="textPassword"
+            android:textSize="28sp" />
+
+        <EditText
+            android:id="@+id/repassword"
+            android:layout_width="272dp"
+            android:layout_height="63dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="65dp"
+            android:layout_marginEnd="27dp"
+            android:layout_marginBottom="292dp"
+            android:hint="确认密码"
+            android:inputType="textPassword"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="334dp"
+            android:layout_marginBottom="453dp"
+            android:background="@drawable/phone"
+            android:textSize="28sp" />
+
+
+        <TextView
+            android:layout_width="42dp"
+            android:layout_height="51dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="335dp"
+            android:layout_marginBottom="377dp"
+            android:background="@drawable/lock" />
+
+        <TextView
+            android:layout_width="42dp"
+            android:layout_height="51dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="335dp"
+            android:layout_marginBottom="297dp"
+            android:background="@drawable/lock" />
+
+        <Button
+            android:id="@+id/bnt_reg_reg"
+            android:layout_width="351dp"
+            android:layout_height="99dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="184dp"
+            android:background="@drawable/registered"
+            android:onClick="btn_reg_reg" />
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

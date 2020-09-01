@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Edit_CartActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/newadd1"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+        <Button
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="373dp"
+            android:background="@drawable/jtarrow"
+            android:onClick="fanhui" />
+
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/save5"
+            android:onClick="save" />
+
+
+        <EditText
+            android:id="@+id/edt_name"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="85dp"
+            android:layout_marginLeft="230dp"
+            android:layout_marginBottom="680dp"
+            android:hint="必填"
+            android:textSize="20dp"
+            android:background="@null"/>
+
+
+        <EditText
+            android:id="@+id/edt_gongsi"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="85dp"
+            android:layout_marginLeft="230dp"
+            android:layout_marginBottom="605dp"
+            android:textSize="20dp"
+            android:background="@null"/>
+
+
+        <EditText
+            android:id="@+id/edt_bumen"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="85dp"
+            android:layout_marginLeft="230dp"
+            android:layout_marginBottom="550dp"
+            android:textSize="20dp"/>
+
+
+        <EditText
+            android:id="@+id/edt_zhiwei"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="85dp"
+            android:layout_marginLeft="230dp"
+            android:layout_marginBottom="495dp"
+            android:textSize="20dp"
+            android:background="@null"/>
+
+
+        <EditText
+            android:id="@+id/edt_shouji"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="85dp"
+            android:layout_marginLeft="230dp"
+            android:layout_marginBottom="420dp"
+            android:maxLength="11"
+            android:inputType="phone"
+            android:textSize="20dp"
+            android:background="@null"/>
+
+        <EditText
+            android:id="@+id/edt_youjian"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="85dp"
+            android:layout_marginLeft="230dp"
+            android:layout_marginBottom="365dp"
+            android:textSize="20dp"
+            android:background="@null"/>
+
+
+        <EditText
+            android:id="@+id/edt_chuanzhen"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="85dp"
+            android:layout_marginLeft="230dp"
+            android:layout_marginBottom="310dp"
+            android:textSize="20dp"
+            android:background="@null"/>
+
+
+        <EditText
+            android:id="@+id/edt_wangzhi"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="85dp"
+            android:layout_marginLeft="230dp"
+            android:layout_marginBottom="255dp"
+            android:textSize="20dp"
+            android:background="@null"/>
+
+
+        <EditText
+            android:id="@+id/edt_dizhi"
+            android:layout_width="290dp"
+            android:layout_height="34dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="85dp"
+            android:layout_marginLeft="230dp"
+            android:layout_marginBottom="200dp"
+            android:textSize="20dp"
+            android:background="@null"/>
+
+
+
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

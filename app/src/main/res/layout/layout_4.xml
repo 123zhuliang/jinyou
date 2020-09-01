@@ -2,36 +2,123 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/personalcenter2">
 
-    <ListView
-        android:layout_width="match_parent"
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/list_top"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
-    </ListView>
-    <ListView
-        android:layout_width="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="261dp"
+        android:layout_marginBottom="627dp"
+        app:srcCompat="@drawable/tx" />
+
+    <TextView
+        android:id="@+id/personname"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/list_bottom"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_below="@+id/list_top">
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="194dp"
+        android:layout_marginBottom="667dp"
+        android:text="小七"
+        android:textSize="28sp" />
 
-    </ListView>
-    <Button
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:id="@+id/dneglu"
-        android:text="登录"
-        android:textSize="25sp"
-        android:textColor="#F3219F"
-        android:background="#9CCDF5"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/list_bottom"
-        android:onClick="denglu"/>
+    <TextView
+        android:id="@+id/persongongsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="633dp"
+        android:text="广播有限公司"
+        android:textSize="25sp" />
 
+    <ImageButton
+        android:id="@+id/writeziliao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="667dp"
+        android:background="@drawable/write"
+        />
+
+
+
+
+
+    <ImageButton
+        android:id="@+id/addcart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="475dp"
+        android:background="@drawable/arrow1"
+        android:textColor="#000000"/>
+
+
+
+
+    <ImageButton
+        android:id="@+id/shareart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="425dp"
+        android:background="@drawable/arrow1" />
+
+
+
+    <ImageButton
+        android:id="@+id/shezhi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="380dp"
+        android:background="@drawable/arrow1" />
+
+
+
+    <ImageButton
+        android:id="@+id/公开"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="260dp"
+        android:background="@drawable/off" />
+
+    <ImageButton
+        android:id="@+id/update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="261dp"
+        android:layout_marginBottom="180dp"
+        android:background="@drawable/update" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="180dp"
+        android:text="更新名片信息" />
 
 </RelativeLayout>

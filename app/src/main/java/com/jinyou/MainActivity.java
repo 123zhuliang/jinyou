@@ -1,25 +1,24 @@
 package com.jinyou;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
-import android.graphics.Color;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.jinyou.Adapter.Person;
-import com.jinyou.Adapter.PersonAdapter;
 import  com.jinyou.Adapter.myfragmentview;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-
+    public String name;
+    public String gongsi;
+    private static final int REUEST_ZHUCE_CODE=1;
 
     private TextView tb_1,tb_2,tb_3,tb_4;
     private ViewPager myViewPager;
@@ -78,25 +77,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private  void showFragment(int num){
         myViewPager.setCurrentItem(num);
         if (num==0){
-            tb_1.setBackgroundColor(Color.RED);
+            /*tb_1.setBackgroundColor(Color.RED);
             tb_2.setBackgroundColor(Color.WHITE);
             tb_3.setBackgroundColor(Color.WHITE);
-            tb_4.setBackgroundColor(Color.WHITE);
+            tb_4.setBackgroundColor(Color.WHITE);*/
         }else if (num==1){
-            tb_1.setBackgroundColor(Color.WHITE);
+            /*tb_1.setBackgroundColor(Color.WHITE);
             tb_2.setBackgroundColor(Color.RED);
             tb_3.setBackgroundColor(Color.WHITE);
-            tb_4.setBackgroundColor(Color.WHITE);
+            tb_4.setBackgroundColor(Color.WHITE);*/
         }else if (num==2){
-            tb_1.setBackgroundColor(Color.WHITE);
+            /*tb_1.setBackgroundColor(Color.WHITE);
             tb_2.setBackgroundColor(Color.WHITE);
             tb_3.setBackgroundColor(Color.RED);
-            tb_4.setBackgroundColor(Color.WHITE);
+            tb_4.setBackgroundColor(Color.WHITE);*/
         }else if (num==3){
-            tb_1.setBackgroundColor(Color.WHITE);
+            /*tb_1.setBackgroundColor(Color.WHITE);
             tb_2.setBackgroundColor(Color.WHITE);
             tb_3.setBackgroundColor(Color.WHITE);
-            tb_4.setBackgroundColor(Color.RED);
+            tb_4.setBackgroundColor(Color.RED);*/
         }
     }
     @Override
@@ -112,8 +111,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    public void denglu(View view) {
-        Toast.makeText(this,"ok" ,Toast.LENGTH_LONG).show();
+
+    //添加名片
+    public void addCart(View view) {
+        Intent intent = new Intent();
+        intent.setClass(MainActivity.this,Edit_CartActivity.class);
+        this.startActivity(intent);
+        finish();
+        //MainActivity.this.startActivityForResult(intent,REUEST_ZHUCE_CODE);
+
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent intent) {
+        super.onActivityResult(requestCode, resultCode, intent);
+        if(intent==null){
+            return;
+        }
+        switch (requestCode){
+            case  REUEST_ZHUCE_CODE:
+
+                break;
+
+            default:
+
+        }
     }
 
 
@@ -127,7 +148,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         @Override
         public void onPageSelected(int position) {
 
-            if (position==0){
+
+           /* if (position==0){
                 tb_1.setBackgroundColor(Color.RED);
                 tb_2.setBackgroundColor(Color.WHITE);
                 tb_3.setBackgroundColor(Color.WHITE);
@@ -148,7 +170,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 tb_2.setBackgroundColor(Color.WHITE);
                 tb_3.setBackgroundColor(Color.WHITE);
                 tb_4.setBackgroundColor(Color.RED);
-            }
+            }*/
         }
 
         @Override
