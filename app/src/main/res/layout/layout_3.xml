@@ -13,23 +13,19 @@
         android:layout_marginLeft="50dp"
         android:layout_marginTop="48dp"/>
     <EditText
-        android:id="@+id/searchedit"
+        android:id="@+id/searchedits"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:hint="请输入电话"
         android:background="@null"
         android:layout_marginLeft="65dp"
+        android:imeOptions="actionSearch"
         android:layout_marginTop="-17dp"/>
 
-    <Button
-        android:id="@+id/searchbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="300dp"
-        android:text="搜索"/>
+
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/serchReview"
+        android:id="@+id/serchReviews"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"

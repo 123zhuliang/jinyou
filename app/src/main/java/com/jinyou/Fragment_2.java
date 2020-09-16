@@ -33,14 +33,26 @@ public class Fragment_2 extends Fragment {
     private quanAdapter quansAdapter;
     private List<quan> friendslist = new ArrayList<>();
     private String s;
+    private View view;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.layout_2,container,false);
-        initDate();
+        if (view==null){
+            view = inflater.inflate(R.layout.layout_2,container,false);
+            initDate();
+        }
+        ViewGroup parent = (ViewGroup) view.getParent();
+        if (parent!=null){
+            parent.removeView(view);
+        }
+
+
+
         quan_listview = view.findViewById(R.id.youquanlistview);
-        quansAdapter = new quanAdapter(friendslist,getActivity());
-        quan_listview.setAdapter(quansAdapter);
+
+
+
+
 
         return  view;
     }
@@ -52,7 +64,7 @@ public class Fragment_2 extends Fragment {
         BmobQuery<quan> query = new BmobQuery<>();
         query.addWhereExists("quanname");
 
-        query.findObjects(new FindListener<quan>() {
+        query.findObjects(  new FindListener<quan>() {
             @Override
             public void done(List<quan> list, BmobException e) {
                 if (e==null){
@@ -62,6 +74,10 @@ public class Fragment_2 extends Fragment {
                         quans.setImsa(R.drawable.group9);
                         quans.setQuanname(list.get(i).getQuanname());
                         friendslist.add(quans);
+                        quansAdapter = new quanAdapter(friendslist,getContext());
+                        //quansAdapter.update(friendslist);
+                        quansAdapter.notifyDataSetChanged();
+                        quan_listview.setAdapter(quansAdapter);
                     }
                 }else{
                     Toast.makeText(getActivity(),"您还没有圈子",Toast.LENGTH_LONG).show();
@@ -80,9 +96,11 @@ public class Fragment_2 extends Fragment {
                 Intent intent = new Intent();
                 intent.setClass(getActivity(),newyouquan.class);
                 getActivity().startActivity(intent);
+                //getActivity().finish();
             }
         });
-        quan_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+        /*quan_listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(view.getContext(),"fdafsf",Toast.LENGTH_LONG).show();
@@ -90,7 +108,7 @@ public class Fragment_2 extends Fragment {
                 intent.setClass(view.getContext(),itemActivity.class);
                 view.getContext().startActivity(intent);
             }
-        });
+        });*/
     }
 
     //新建友圈

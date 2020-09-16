@@ -2,6 +2,10 @@ package com.jinyou.dao;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import android.telephony.PhoneNumberUtils;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,11 +13,24 @@ import android.view.Window;
 import android.widget.TextView;
 
 import com.jinyou.R;
+import com.jinyou.mode.Cart;
+
+import java.util.List;
 
 public class showBottomDialog {
     private View view;
     private TextView phonetake;
-    public void BottomDialog(Context context) {
+    public void SendSMSTo(String phoneNumber,String message,Context context){
+        //判断输入的phoneNumber是否为合法电话号码
+        if(PhoneNumberUtils.isGlobalPhoneNumber(phoneNumber)){
+            //Uri.parse("smsto") 这里是转换为指定Uri,固定写法
+            Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:"+phoneNumber));
+            intent.putExtra("sms_body", message);
+            context.startActivity(intent);
+        }
+    }
+    public void BottomDialog(Context context, String s) {
+
 
         //1、使用Dialog、设置style
         final Dialog dialog = new Dialog(context, R.style.DialogTheme);
@@ -33,6 +50,7 @@ public class showBottomDialog {
         dialog.findViewById(R.id.tv_take_photo).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                SendSMSTo(s,"",context);
                 dialog.dismiss();
             }
         });
@@ -42,11 +60,14 @@ public class showBottomDialog {
             @Override
             public void onClick(View view) {
 
+                Uri uri=Uri.parse("tel:"+s);
+                Intent intent=new Intent(Intent.ACTION_DIAL,uri);
+                context.startActivity(intent);
+                Log.d("qw", "onClick: "+phonetake.getText());
 
-                dialog.dismiss();
             }
         });
-
+        phonetake.setText(s);
         dialog.findViewById(R.id.tv_cancel).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -19,6 +20,7 @@ public class Edit_CartActivity extends AppCompatActivity {
     public  Cart cart;
     public String sid;
     public Bundle bundle;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,10 +57,12 @@ public class Edit_CartActivity extends AppCompatActivity {
         cart.save(new SaveListener<String>() {
             @Override
             public void done(String s, BmobException e) {
+                Log.d("asd", "done: "+e);
                 Intent intent = new Intent();
                 intent.setClass(Edit_CartActivity.this,MainActivity.class);
                 Edit_CartActivity.this.startActivity(intent);
                 finish();
+
             }
         });
     }

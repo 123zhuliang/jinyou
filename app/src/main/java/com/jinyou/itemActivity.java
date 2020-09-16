@@ -7,6 +7,7 @@ import android.widget.ListView;
 
 import com.jinyou.Adapter.FriendsAdapter;
 import com.jinyou.mode.Cart;
+import com.jinyou.mode.Friends;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +15,7 @@ import java.util.List;
 public class itemActivity extends AppCompatActivity {
     private ListView friend_listview;
     private FriendsAdapter friendsAdapter;
-    private List<Cart> friendslist = new ArrayList<>();
+    private List<Friends> friendslist = new ArrayList<>();
     private String s;
     String names[] = {"张三","李四","王五","赵六"};
     @Override

@@ -18,7 +18,7 @@ import cn.bmob.v3.listener.SaveListener;
 
 public class newyouquan extends AppCompatActivity {
 
-    EditText namequan;
+    private EditText namequan;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,8 +31,9 @@ public class newyouquan extends AppCompatActivity {
 
     public void youquanfanhui(View view) {
         Intent intent = new Intent();
-        intent.setClass(this, Fragment_2.class);
+        intent.setClass(this, MainActivity.class);
         this.startActivity(intent);
+        finish();
     }
 
     public void youquanwancheng(View view) {
@@ -47,10 +48,18 @@ public class newyouquan extends AppCompatActivity {
             quans.save(new SaveListener<String>() {
                 @Override
                 public void done(String s, BmobException e) {
-                    Intent intent = new Intent();
-                    intent.setClass(newyouquan.this,myyouquan.class);
-                    newyouquan.this.startActivity(intent);
+                    if (e==null){
+
+                        Intent intent = new Intent();
+                        intent.setClass(newyouquan.this,myyouquan.class);
+                        newyouquan.this.startActivity(intent);
+                        finish();
+
+                    }else Toast.makeText(getApplicationContext(),"e",Toast.LENGTH_SHORT).show();
                 }
+
+
+
             });
         }
 

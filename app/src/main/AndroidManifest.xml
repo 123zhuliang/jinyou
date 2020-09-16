@@ -17,18 +17,45 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".itemActivity"></activity>
-        <activity android:name=".setActivity" />
-        <activity android:name=".searchActivity" />
-        <activity android:name=".EditInfo_ctivity" />
-        <activity android:name=".addfriends" />
-        <activity android:name=".newyouquan" />
-        <activity android:name=".setpasswordActivity" />
-        <activity android:name=".Edit_CartActivity" />
-        <activity android:name=".regActivity" />
-        <activity android:name=".loginActivity" />
-        <activity android:name=".login_regActivity" />
-        <activity android:name=".startActivity">
+        <activity android:name=".itemActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:launchMode="singleTask"></activity>
+        <activity android:name=".setActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:launchMode="singleTask"/>
+        <activity android:name=".searchActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:launchMode="singleTask"/>
+        <activity android:name=".EditInfo_ctivity"
+            android:windowSoftInputMode="adjustPan"
+            android:launchMode="singleTask"/>
+        <activity android:name=".addfriends"
+            android:windowSoftInputMode="adjustPan"
+            android:launchMode="singleTask"/>
+        <activity android:name=".newyouquan"
+            android:windowSoftInputMode="adjustPan"
+            android:launchMode="singleTask"/>
+        <activity android:name=".myyouquan"
+            android:windowSoftInputMode="adjustPan"
+            android:launchMode="singleTask"/>
+        <activity android:name=".setpasswordActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:launchMode="singleTask"/>
+        <activity android:name=".Edit_CartActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:launchMode="singleTask"/>
+        <activity android:name=".regActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:launchMode="singleTask"/>
+        <activity android:name=".loginActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:launchMode="singleTask"/>
+        <activity android:name=".login_regActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:launchMode="singleTask"/>
+        <activity android:name=".startActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -36,7 +63,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".BmobActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"
+                    android:windowSoftInputMode="adjustPan"
+            >
+
+
+        </activity>
     </application>
 
 </manifest>

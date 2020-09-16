@@ -20,6 +20,7 @@ public class Cart extends BmobObject {
     private String address;//地址
     private String cartdate;//名片交换日期
     private String password;
+    private boolean zhuangtai;//登录状态
 
     public Cart() {
     }
@@ -39,6 +40,14 @@ public class Cart extends BmobObject {
         this.theurl = theurl;
         this.address = address;
 
+    }
+
+    public boolean isZhuangtai() {
+        return zhuangtai;
+    }
+
+    public void setZhuangtai(boolean zhuangtai) {
+        this.zhuangtai = zhuangtai;
     }
 
     public void setCartid(Integer cartid) {

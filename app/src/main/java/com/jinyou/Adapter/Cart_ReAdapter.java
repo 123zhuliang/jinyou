@@ -28,7 +28,7 @@ public class Cart_ReAdapter extends RecyclerView.Adapter<Cart_ReAdapter.MyViewHo
     private List<Cart> cdata = new ArrayList<>();
     private Context context;
     private showBottomDialog showBottomDialog = new showBottomDialog();
-    private String s;
+
 
     //构造方法
 
@@ -37,6 +37,48 @@ public class Cart_ReAdapter extends RecyclerView.Adapter<Cart_ReAdapter.MyViewHo
         this.context = context;
     }
 
+    /*public void replaceAll(List<Cart> data){
+        cdata = new ArrayList<>();
+        cdata.clear();
+        if (data!=null && data.size()>0){
+            cdata.addAll(data);
+        }
+        notifyDataSetChanged();
+
+    }*/
+    /*public interface LongClickLisenter {
+        void LongClickLisenter(int position);
+    }
+
+    private LongClickLisenter longClickLisenter;
+
+    public void setLongClickLisenter(LongClickLisenter longClickLisenter) {
+        this.longClickLisenter = longClickLisenter;
+    }*/
+
+
+    public void del(int i) {
+        cdata.remove(i);
+        notifyDataSetChanged();
+    }
+
+    //监听器接口
+    public interface  OnRecyItemClickList{
+        void onClick(View view,int posion);
+    }
+
+    public interface  OnRecyItemLongClickList{
+        void onClick(View view,int posion);
+    }
+
+    private OnRecyItemClickList onRecyItemClickList;
+    private OnRecyItemLongClickList onRecyItemLongClickList;
+    public void setOnRecyItemClickList(OnRecyItemClickList onRecyItemClickList){
+        this.onRecyItemClickList = onRecyItemClickList;
+    }
+    public void setOnRecyItemLongClickList(OnRecyItemLongClickList onRecyItemLongClickList){
+        this.onRecyItemLongClickList = onRecyItemLongClickList;
+    }
     @NonNull
     @Override
     //返回一个自定义的ViewHolder
@@ -44,13 +86,17 @@ public class Cart_ReAdapter extends RecyclerView.Adapter<Cart_ReAdapter.MyViewHo
         //填充布局获取列表项布局
         View itemView = LayoutInflater.from(context).inflate(R.layout.cartview,parent,false);
         MyViewHolder myViewHolder = new MyViewHolder(itemView);
-        myViewHolder.phone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showBottomDialog.BottomDialog(context);
 
+        /*parent.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                int layoutPosition = myViewHolder.getLayoutPosition();
+                if (longClickLisenter != null) {
+                    longClickLisenter.LongClickLisenter(layoutPosition);
+                }
+                return false;
             }
-        });
+        });*/
         return myViewHolder;
     }
 
@@ -62,19 +108,45 @@ public class Cart_ReAdapter extends RecyclerView.Adapter<Cart_ReAdapter.MyViewHo
         holder.myimg.setImageResource(cart.getImg());
         holder.gongsi.setText(cart.getCompany());
         holder.name.setText(cart.getCartname());
+        holder.posion.setText(cart.getPosition());
         //holder.phone.setText(cart.getMobile());
-         s = cart.getMobile();
+         String s = cart.getMobile();
+        Log.d("sss", "onBindViewHolder: 手机号"+s);
+         if (onRecyItemClickList!=null){
+             holder.itemView.setOnClickListener(new View.OnClickListener() {
+                 @Override
+                 public void onClick(View v) {
+                     int i = holder.getLayoutPosition();
+                     onRecyItemClickList.onClick(holder.itemView,i);
+                 }
+             });
+         }
+         if (onRecyItemLongClickList!=null){
+             holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+                 @Override
+                 public boolean onLongClick(View v) {
+                     int i = holder.getLayoutPosition();
+                     onRecyItemLongClickList.onClick(holder.itemView,i);
+                     return true;
+                 }
+             });
+         }
+        holder.phone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int i = holder.getLayoutPosition();
+                showBottomDialog.BottomDialog(context,s);
 
-
-
-
-
+            }
+        });
     }
 
     //返回名片数据个数
     @Override
     public int getItemCount() {
-        return cdata.size();
+        //if (cdata == null) return 0;
+        //else
+            return cdata.size();
     }
 
 

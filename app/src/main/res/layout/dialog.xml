@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center"
-        android:text="打电话"
+        android:text="发短信"
         android:textColor="@android:color/background_dark"
         android:textSize="16sp" />
 
@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center"
-        android:text=""
+
         android:textColor="@android:color/background_dark"
         android:textSize="16sp" />
 

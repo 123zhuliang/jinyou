@@ -43,7 +43,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="85dp"
             android:layout_marginLeft="230dp"
-            android:layout_marginBottom="680dp"
+            android:layout_marginBottom="685dp"
             android:hint="必填"
             android:textSize="20dp"
             android:background="@null"/>
@@ -71,7 +71,8 @@
             android:layout_marginStart="85dp"
             android:layout_marginLeft="230dp"
             android:layout_marginBottom="550dp"
-            android:textSize="20dp"/>
+            android:textSize="20dp"
+            android:background="@null"/>
 
 
         <EditText
@@ -82,7 +83,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="85dp"
             android:layout_marginLeft="230dp"
-            android:layout_marginBottom="495dp"
+            android:layout_marginBottom="500dp"
             android:textSize="20dp"
             android:background="@null"/>
 

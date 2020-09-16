@@ -32,7 +32,7 @@ public class loginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         init();
-        Bmob.initialize(this,"c56cc0b5e86ad7fb3ccf6edc58192d03");
+
     }
 //初始化控件
     public void init(){
@@ -55,6 +55,7 @@ public class loginActivity extends AppCompatActivity {
                             if (list.get(0).getPassword().equals(password)){
                                 //密码正确
                                 //跳转到功能模块
+                                list.get(0).setZhuangtai(true);
                                 Intent intent = new Intent();
                                 intent.setClass(loginActivity.this,MainActivity.class);
                                 loginActivity.this.startActivity(intent);

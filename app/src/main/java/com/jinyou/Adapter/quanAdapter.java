@@ -18,7 +18,7 @@ import com.jinyou.mode.quan;
 import java.util.ArrayList;
 import java.util.List;
 
-public class quanAdapter extends BaseAdapter  {
+public class quanAdapter extends BaseAdapter implements AdapterView.OnItemClickListener {
     private List<quan> pdata = new ArrayList<>();
     private Context context;
 
@@ -27,6 +27,14 @@ public class quanAdapter extends BaseAdapter  {
         this.context = context;
     }
 
+    /*public void update(List<quan> list){
+        pdata = new ArrayList<>();
+        pdata.clear();
+        if (list!=null&&list.size()>0){
+            pdata.addAll(list);
+        }
+        notifyDataSetChanged();
+    }*/
     public List<quan> getPdata() {
         return pdata;
     }
@@ -50,8 +58,10 @@ public class quanAdapter extends BaseAdapter  {
         return position;
     }
 
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-
+    }
 
 
     static  class ViewHolder{
@@ -67,6 +77,7 @@ public class quanAdapter extends BaseAdapter  {
             holder.img = convertView.findViewById(R.id.quantouxiang);
             holder.name = convertView.findViewById(R.id.quanmingzi);
             convertView.setTag(holder);
+
         }else {
             holder =(ViewHolder) convertView.getTag();
         }
